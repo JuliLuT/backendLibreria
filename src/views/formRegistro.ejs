@@ -1,27 +1,25 @@
 <%-include ("./partials/head")-%>
-    <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="../css/registro.css">
 
     <body>
         <form action="" method="post" id="form-registro">
             <div class="registro">
                 <h1>Registrate!</h1>
                 <div class="registro__inputs">
-                    <input type="text" name="" id="name" required> <label for="">Nombre completo</label>
+                    <input type="text" name="name" id="name" required> <label for="name">Nombre</label>
+                    
                 </div>
                 <div class="registro__inputs">
-                    <input type="text" name="" id="userName" required> <label for="">Nombre de usuario</label>
+                    <input type="text" name="userName" id="userName" required> <label for="userName">Nombre de usuario</label>
                 </div>
                 <div class="registro__inputs">
-                    <input type="email" name="" id="email" required> <label for="">Email</label>
+                    <input type="email" name="email" id="email" required> <label for="email">Email</label>
                 </div>
                 <div class="registro__inputs">
-                    <input type="date" name="" id="birth" required>
+                    <input type="date" name="birth" id="birth">
                 </div>
                 <div class="registro__inputs">
-                    <input type="password" name="" id="Pass" required> <label for="">Contraseña</label>
-                </div>
-                <div class="registro__inputs">
-                    <input type="password" name="" id="repPass" required> <label for="">Repetir Contraseña</label>
+                    <input type="password" name="Pass" id="Pass" required> <label for="Pass">Contraseña</label>
                 </div>
                 <div class="button">
                     <button type="submit">Suscribite!</button>

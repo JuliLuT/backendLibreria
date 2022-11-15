@@ -1,30 +1,30 @@
 [
     {
-        " Id": 1,
+        " id": 1,
         "Nombre": "Harry Potter y la piedra filosofal",
         "Descripcion": "Libro infantil que relata las aventuras de un niño que acaba de enterarse que es mago y debe enfrentar a uno de los villanos mas grandes del mundo magico",
         "Precio": "$5000"
     },
     {
-        "Id": 2,
+        "id": 2,
         "Nombre": "Harry Potter y la camara secreta",
         "Descripcion": "Acompaña a Harry en este nuevo año escolar donde debera enfrentar peligros aun mas grandes e indescifrables",
         " Precio": "$4000"
     },
     {
-        "Id": 3,
+        "id": 3,
         "Nombre": "Harry Potter y el prisionero de Azkaban",
         "Descripcion": "En su tercer año escolar Harry debra enfrentarse al villano que logro escapar de Azkaban. Es este el peligro mas grande ?",
         "Precio": "$4500"
     },
     {
-        "Id": 4,
+        "id": 4,
         "Nombre": "Harry Potter y el caliz de fuego",
         "Descripcion": "Un juego, reglas y un mago que como siempre logra trasgredirlas",
         "Precio": "$6000"
     },
     {
-        "Id": 5,
+        "id": 5,
         "Nombre": "Harry Potter y la orden del fenix",
         " Descripcion": "Luego de que Harry y Dumbledore afirmaran que el mago mas poderoso y aterrador que el mundo magico haya conocido esta vivo, la gente elige no creerles y condenarlos a ellos...",
         "Precio": "$5500"
