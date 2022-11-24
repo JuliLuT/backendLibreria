@@ -1,5 +1,5 @@
 const express= require('express');
-const {validationResult } = require('express-validator');
+const {body,validationResult } = require('express-validator');
 const app= express.Router()
 
 const procesarForm = (req, res, next) => {

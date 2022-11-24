@@ -12,12 +12,13 @@ app.get('/inicioSesion', loginController.obtenerVista)
 app.post('/', (req, res) => {
     const  password  = req.body.Pass
     const passwordHashed = bCrypt.hashSync(password, 10);
+    
 });
 
  
-app.post('/',
+app.post('/inicioSesion',[
     body('userName').notEmpty(),
-    body('Pass').isLength({min: 5})
+    body('Pass').isLength({min: 5})]
     ,middle.procesarForm
 );
 
