@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julieta Tacconi">
+    <meta name="description" content="Libreria e-commerce">
+    <meta name="keywords" content="libros, sagas, libreria, clasicos, filosofia, ciencia ficcion, web,">
+    <title>Inicia Sesion LM</title>
+    <link rel="stylesheet" href="../css/inicioSesion.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form  id="form-registro" >
+        <div class="Inicio-sesion">
+            <h1>Inicio de Sesion</h1>
+            <div class="Inicio-sesion__inputs">
+                <input type="text" name="" id="userName" required  > <label for="userName">Nombre de usuario</label>
+            </div>
+            <div class="Inicio-sesion__inputs">
+                <input type="password" name="" id="Pass" required onchange ="validoUser()" > <label for="Pass">Contraseña</label>
+                <div class="button">
+                    <button type="submit" id="boton" disabled >Iniciar sesion</button>
+                </div>
+        <p> No estas registrado?,</p><a href="./formulario-Registro.html"> <b>Resgistrate aqui</b></a>
+        <script src="./inicioSesion.js" ></script>
+    </form>
+</body>

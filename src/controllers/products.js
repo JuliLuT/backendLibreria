@@ -5,8 +5,10 @@ const getAll = (req, res) => {
         .then(products => res.status(200).send(products))
         .catch(error => res.status(404).send(error))
 };
-const getOne = (req, res) => {
+const getOne = async (req, res) => {
     const { id } = req.params
+product = await products.findOne({ where: { id: id } })
+    if (!product) return res.status(404).render("../src/views/notFound")
     return products.findOne({ where: { id: id } })
         .then(products => res.status(200).send(products))
         .catch(error => res.status(404).send(error))

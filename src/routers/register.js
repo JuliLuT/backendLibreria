@@ -7,10 +7,10 @@ const middle = require('../routers/middleware')
 
 app.get('/', registerController.obtenerVista);
 
-app.post('/registro', [
+app.post('/', [
     body('name').notEmpty().isAlpha(),
     body('email').notEmpty().isEmail(),
-    body('Pass').notEmpty().isNumeric()]
+    body('Pass').isLength({min: 5}).isNumeric()]
     ,middle.procesarForm)
 
 module.exports = app

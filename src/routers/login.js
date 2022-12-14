@@ -1,27 +1,30 @@
 const express = require('express');
-const { body, validationResult } = require('express-validator');
+const { body } = require('express-validator');
 const loginController = require('../controllers/login');
 const app = express.Router();
 const middle = require('../routers/middleware');
 const bCrypt = require('bcrypt');
 const saltRounds = 10;
+const userCont=require('../controllers/login');
 
 
-app.get('/inicioSesion', loginController.obtenerVista)
+app.get('/',userCont.getAll);
+app.get('/:id',userCont.getOne);
+app.post('/',userCont.create);
+app.put('/:id',userCont.update);
+app.delete('/:id', userCont.deleteOne);
 
-app.post('/', (req, res) => {
-    const  password  = req.body.Pass
+app.get('/', loginController.obtenerVista)
+app.post('/', (req, res, next) => {
+    const password = req.body.Pass
     const passwordHashed = bCrypt.hashSync(password, 10);
-    
+    console.log(passwordHashed)
+    next();
 });
 
- 
-app.post('/inicioSesion',[
-    body('userName').notEmpty(),
-    body('Pass').isLength({min: 5})]
-    ,middle.procesarForm
-);
-
-
+app.post('/',[
+    body('userName').isEmail(),
+    body('Pass').isLength({ min: 5 })]
+    ,middle.procesarForm);
 
 module.exports = app

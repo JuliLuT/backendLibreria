@@ -33,10 +33,15 @@ app.use(bodyParser.json())
 app.use('/registro', require('./routers/register'))
 app.use('/inicioSesion', require('./routers/login'))
 app.use('/products', require('./routers/products'))
-app.use('/users', require('./routers/users'))
 
 
 
+app.use(function(err,req,res,next){
+    console.log(err)
+    return res.json({
+        error: err.message
+    })
+});
 
 
 app.listen(PORT, () => console.log("listening on port", PORT))
