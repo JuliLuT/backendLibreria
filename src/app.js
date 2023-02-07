@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3000;
 const morgan = require('morgan');
 const bCrypt = require('bcrypt');
+const cors= require('cors');
 const saltRounds = 10;
 
 const bodyParser = require("body-parser");
@@ -11,7 +12,8 @@ const sessions = require('express-session');
 const cookieParser = require('cookie-parser');
 const unDia = 1000 * 60 * 60 * 24;
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+app.use(cors);
 
 app.use(sessions({
     secret: "123456",
@@ -33,6 +35,7 @@ app.use(bodyParser.json())
 app.use('/registro', require('./routers/register'))
 app.use('/inicioSesion', require('./routers/login'))
 app.use('/products', require('./routers/products'))
+app.use('/users', require('./routers/users')) 
 
 
 

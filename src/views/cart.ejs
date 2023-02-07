@@ -11,9 +11,9 @@
                         architecto ullam vero optio placeat totam minus? Libero delectus sequi omnis quam quod enim
                         doloremque in ducimus eveniet?</p>
                     <div class="totales">
-                        <button class="agregar">+</button>
+                        <button class="agregar" id="agregaLibro1">+</button>
                         <p class="cantidad">1</p>
-                        <button class="agregar">-</button>
+                        <button class="agregar" id="restaLibro1">-</button>
                     </div>
                 </div>
                 <h3>$2500</h3>
@@ -26,16 +26,50 @@
                         recusandae id nobis, reprehenderit nesciunt blanditiis, quod distinctio necessitatibus quos
                         perferendis quia autem magni eaque vel mollitia?</p>
                     <div class="totales">
-                        <button class="agregar">+</button>
+                        <button class="agregar" id="agregaLibro2">+</button>
                         <p class="cantidad">1</p>
-                        <button class="agregar">-</button>
+                        <button class="agregar" id="restaLibro2">-</button>
                     </div>
                 </div>
-                <h3>$2500</h3>
+                <h3>$1500</h3>
+
+                <div class="producto">
+                    <div class="producto__img">
+                        <img height=200px src="./img/libro 3.jpg" alt="">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat deleniti doloribus beatae
+                        architecto ullam vero optio placeat totam minus? Libero delectus sequi omnis quam quod enim
+                        doloremque in ducimus eveniet?</p>
+                    <div class="totales">
+                        <button class="agregar" id="agregaLibro3">+</button>
+                        <p class="cantidad">1</p>
+                        <button class="agregar" id="restaLibro3">-</button>
+                    </div>
+                </div>
+                <h3>$3800</h3>
+                <div class="producto">
+                    <div class="producto__img">
+                        <img height=200px src="./img/libro 4.jpg" alt="">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat deleniti doloribus beatae
+                        architecto ullam vero optio placeat totam minus? Libero delectus sequi omnis quam quod enim
+                        doloremque in ducimus eveniet?</p>
+                    <div class="totales">
+                        <button class="agregar" id="agregaLibro4">+</button>
+                        <p class="cantidad">1</p>
+                        <button class="agregar" id="restaLibro4">-</button>
+                    </div>
+                </div>
+                <h3>$2650</h3>
                 <h2> Total: $5000</h2>
+                
                 <div class="button__pagar">
-                    <button class="bigbtn">Abonar</button>
+                    <button class="bigbtn" id="Abonar">Abonar</button>
+                    <button class="bigbtn" id="removeCart">Vaciar</button>
                 </div>
             </div>
             <%-include ("./partials/footer")-%>
+            <script src="addCart.js"></script>
+            <script src="updateCart.js"></script>
+            <script src="removeCart.js"></script>
         </body>
